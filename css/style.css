@@ -11,7 +11,7 @@ body {
 }
 
 .container {
-    width: 1070px;
+    width: 1270px;
     height: 100%;
     margin: 0 auto;
 }
@@ -36,7 +36,7 @@ header img {
 
 .cd {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     flex-direction: column;
     flex-basis: 200px;
@@ -58,11 +58,11 @@ header img {
     text-transform: uppercase;
 }
 
-.cd span.author {
+.cd div.author {
     color: grey;
     font-size: 20px;
 }
 
-.cd span.year {
+.cd div.year {
     color: grey;
 }
