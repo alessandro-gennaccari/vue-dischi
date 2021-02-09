@@ -15,14 +15,15 @@
                 <div class="container">
                     <img src="img/logo.png" alt="logo">
                 </div>
-
-                <!-- Select generi musicali -->
-                <select>
-                    <option value="all">All</option>
-                    <option v-for="genre in types" :value="genre">{{genre}}</option>
-                </select>
-
             </header>
+
+            <!-- Select generi musicali -->
+            <div class="options">
+                <select @change="filterGenre" v-model="selected">
+                    <option value="All">All</option>
+                    <option v-for="gen in types" :value="gen">{{gen}}</option>
+                </select>
+            </div>
     
             <div class="cds-container container">
                 <!-- Disco ad esempio -->

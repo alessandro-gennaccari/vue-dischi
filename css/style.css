@@ -11,7 +11,7 @@ body {
 }
 
 .container {
-    width: 1270px;
+    width: 1570px;
     height: 100%;
     margin: 0 auto;
 }
@@ -31,7 +31,7 @@ header img {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    padding: 100px 0;
+    padding: 20px 0;
 }
 
 .cd {
@@ -39,16 +39,18 @@ header img {
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    flex-basis: 200px;
-    padding: 20px;
+    flex-basis: 250px;
+    padding: 15px;
     margin: 10px 20px;
-    height: 360px;
+    height: 400px;
     background: rgb(46, 58, 70);
     text-align: center;
+    border-radius: 10px;
 }
 
 .cd img {
     max-width: 100%;
+    border-radius: 10px;
 }
 
 .cd h3 {
@@ -65,4 +67,19 @@ header img {
 
 .cd div.year {
     color: grey;
+}
+
+.options {
+   text-align: center;
+   margin-top: 10px;
+}
+
+select {
+    text-align: center;
+    margin: auto;
+    background-color: white;
+    font-size: 20px;
+    border-radius: 4px;
+    border:none;
+    width: 10%;
 }

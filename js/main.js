@@ -2,7 +2,8 @@ var app = new Vue({
 	el: '#app',
 	data: {
 		albums: [],
-		types: []
+		types: [],
+		selected: 'All'
 	},
 	methods: {
 
@@ -15,6 +16,22 @@ var app = new Vue({
 				}
 			});
 
+		},
+
+		filterGenre() {
+
+            axios
+			.get('https://flynn.boolean.careers/exercises/api/array/music')
+            .then( result => {
+
+                let filtro = result.data.response;
+
+                if(this.selected != 'All') {
+                    filtro = filtro.filter( element => element.genre == this.selected);
+                }
+
+                this.albums = filtro;
+            })
 		}
 
 	},
@@ -30,8 +47,8 @@ var app = new Vue({
 
 			//Richiamo la funzione
 			this.filterType();
-
-		});
+			
+		})
 
 	}
 }); 
