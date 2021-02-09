@@ -9,22 +9,33 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        <header>
-            <div class="container">
-                <img src="img/logo.png" alt="logo">
-            </div>
-        </header>
+        <div id="app">
 
-        <div id="app" class="cds-container container">
-            <!-- Disco ad esempio -->
-            <div v-for="album in albums" class="cd">
-                <img :src="album.poster" alt="Copertina Disco">
-                <h3>{{album.title}}</h3>
-                <div>
-                    <div class="author">{{album.author}}</div>
-                    <div class="year">{{album.year}}</div>
+            <header>
+                <div class="container">
+                    <img src="img/logo.png" alt="logo">
+                </div>
+
+                <!-- Select generi musicali -->
+                <select>
+                    <option value="all">All</option>
+                    <option v-for="genre in types" :value="genre">{{genre}}</option>
+                </select>
+
+            </header>
+    
+            <div class="cds-container container">
+                <!-- Disco ad esempio -->
+                <div v-for="album in albums" class="cd">
+                    <img :src="album.poster" alt="Copertina Disco">
+                    <h3>{{album.title}}</h3>
+                    <div>
+                        <div class="author">{{album.author}}</div>
+                        <div class="year">{{album.year}}</div>
+                    </div>
                 </div>
             </div>
+
         </div>
 
         
